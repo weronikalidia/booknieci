@@ -44,9 +44,6 @@ gulp.task('sass-lint', () => {
 gulp.task('sass', ['sass-lint'], () => {
     return gulp.src(sources.scss)
         .pipe(sourcemaps.init())
-        // .pipe(sassLint())
-        // .pipe(sassLint.format())
-        // .pipe(sassLint.failOnError())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(destinations.css))
