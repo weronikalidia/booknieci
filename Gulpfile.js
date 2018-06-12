@@ -17,6 +17,7 @@ const sources = {
 
 const destinations = {
     css: 'src/common/css',
+    cssMin: 'src/common/css/min',
     js: 'src/common/js/min'
 }
 
@@ -33,12 +34,16 @@ gulp.task('serve', ['sass'], () => {
     gulp.watch(sources.css, ['minify']);
 });
 
-gulp.task('sass', () => {
+gulp.task('sass-lint', () => {
+    return gulp.src(sources.scss)
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError());
+});
+
+gulp.task('sass', ['sass-lint'], () => {
     return gulp.src(sources.scss)
         .pipe(sourcemaps.init())
-        .pipe(sassLint())
-        .pipe(sassLint.format())
-        .pipe(sassLint.failOnError())
         .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(destinations.css))
@@ -49,7 +54,7 @@ gulp.task('minify', () => {
     return gulp.src(sources.css)
         .pipe(concat('style.css'))
         .pipe(cleanCSS())
-        .pipe(gulp.dest(destinations.css));
+        .pipe(gulp.dest(destinations.cssMin));
 });
 
 gulp.task('uglify', () => {
