@@ -1,5 +1,6 @@
-// sass-lint:disable empty-line-between-blocks
-
+// sass-lint:disable empty-line-between-blocks, clean-import-paths
 @import 'reset';
 @import 'custom/colors';
 @import 'custom/typo';
+@import 'modules/_product';
+@import 'modules/_slider';

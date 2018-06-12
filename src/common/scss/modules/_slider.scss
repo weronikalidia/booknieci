@@ -1,0 +1,20 @@
+.bkn-slider {
+    width: 100%;
+    .bkn-slider_inner {
+        display: flex;
+        width: 100%;
+        .bkn-slider_item {
+            display: flex;
+            height: auto;
+            width: 20%;
+            .bkn-slider_itemImg {
+                img {
+                    max-width: 100%;
+                }
+            }
+            .bkn-slider_itemDesc {
+                font-family: $font-primary;
+            }
+        }
+    }
+}
