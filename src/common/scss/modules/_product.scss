@@ -3,10 +3,16 @@
         font-weight: 300;
         font-size: 24px;
         line-height: 26px;
+        color: $cl-black;
+        text-decoration: none;
     }
     .prd-author {
         font-size: 14px;
         padding: 3px 0 11px;
+        color: $cl-black;
+        text-decoration: none;
+        display: inline-block;
+        width: 100%;
     }
     .prd-description {
         box-sizing: border-box;
