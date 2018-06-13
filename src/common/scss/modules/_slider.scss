@@ -1,0 +1,79 @@
+// sass-lint:disable empty-line-between-blocks, class-name-format, nesting-depth
+.bkn-slider {
+    display: none;
+    width: 100%;
+    @media (min-width: 1200px) {
+        display: block;
+    }
+    .bkn-slider_inner {
+        background: $cl-black;
+        display: flex;
+        width: 100%;
+        .bkn-slider_item {
+            align-items: center;
+            box-sizing: border-box;
+            display: flex;
+            flex: 1;
+            height: 275px;
+            opacity: .6;
+            overflow: hidden;
+            position: relative;
+            transition: .3s;
+            width: 20%;
+            &:hover {
+                cursor: pointer;
+                opacity: .8;
+            }
+            &.is-open {
+                flex: 4;
+                opacity: 1;
+                overflow: visible;
+                padding-top: 10px;
+                &:hover {
+                    cursor: auto;
+                }
+                .bkn-slider_itemImg {
+                    height: 275px;
+                    padding-top: 40px;
+                    text-align: center;
+                    width: 44%;
+                    img {
+                        left: 0;
+                        max-width: 80%;
+                    }
+                }
+                .bkn-slider_itemDesc {
+                    display: inline-block;
+                    width: 66%;
+                }
+            }
+            &.is-first {
+                background: $cl-one;
+            }
+            &.is-second {
+                background: $cl-two;
+            }
+            &.is-third {
+                background: $cl-three;
+            }
+            &.is-four {
+                background: $cl-four;
+            }
+            &.is-five {
+                background: $cl-five;
+            }
+            .bkn-slider_itemImg {
+                width: 100%;
+                img {
+                    left: -50px;
+                    max-width: 150%;
+                    position: relative;
+                }
+            }
+            .bkn-slider_itemDesc {
+                display: none;
+                font-family: $font-primary;
+            }
+        }
+    }
+}

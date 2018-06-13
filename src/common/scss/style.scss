@@ -1,5 +1,15 @@
-// sass-lint:disable empty-line-between-blocks
-
+// sass-lint:disable empty-line-between-blocks, clean-import-paths
 @import 'reset';
 @import 'custom/colors';
 @import 'custom/typo';
+@import 'modules/_product';
+@import 'modules/_slider';
+.bkn-close {
+    font: 300 20px/20px $font-primary;
+    position: absolute;
+    right: 22px;
+    top: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+}
