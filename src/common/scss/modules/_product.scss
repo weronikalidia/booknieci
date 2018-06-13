@@ -1,23 +1,24 @@
-#b-slider {
+// sass-lint:disable empty-line-between-blocks
+.bkn-slider {
     .prd-title {
-        font-weight: 300;
-        font-size: 24px;
-        line-height: 26px;
         color: $cl-black;
+        font-size: 24px;
+        font-weight: 300;
+        line-height: 26px;
         text-decoration: none;
     }
     .prd-author {
+        color: $cl-black;
+        display: inline-block;
         font-size: 14px;
         padding: 3px 0 11px;
-        color: $cl-black;
         text-decoration: none;
-        display: inline-block;
         width: 100%;
     }
     .prd-description {
         box-sizing: border-box;
-        font-weight: 300;
         font-size: 14px;
+        font-weight: 300;
         line-height: 25px;
         padding-right: 22px;
         text-align: justify;

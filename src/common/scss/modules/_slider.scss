@@ -1,24 +1,24 @@
+// sass-lint:disable empty-line-between-blocks, class-name-format, nesting-depth
 .bkn-slider {
     width: 100%;
     .bkn-slider_inner {
+        background: $cl-black;
         display: flex;
         width: 100%;
-        background: $cl-black;
         .bkn-slider_item {
+            align-items: center;
             box-sizing: border-box;
             display: flex;
             flex: 1;
-            align-items: center;
-            height: auto;
-            width: 20%;
             height: 275px;
-            overflow: hidden;
             opacity: .6;
-            transition: all .3s;
+            overflow: hidden;
             position: relative;
+            transition: .3s;
+            width: 20%;
             &:hover {
-                opacity: .8;
                 cursor: pointer;
+                opacity: .8;
             }
             &.is-open {
                 flex: 4;
@@ -29,13 +29,13 @@
                     cursor: auto;
                 }
                 .bkn-slider_itemImg {
-                    width: 44%;
                     height: 275px;
-                    text-align: center;
                     padding-top: 40px;
+                    text-align: center;
+                    width: 44%;
                     img {
-                        max-width: 80%;
                         left: 0;
+                        max-width: 80%;
                     }
                 }
                 .bkn-slider_itemDesc {
@@ -61,8 +61,8 @@
             .bkn-slider_itemImg {
                 width: 100%;
                 img {
-                    max-width: 150%;
                     left: -50px;
+                    max-width: 150%;
                     position: relative;
                 }
             }
