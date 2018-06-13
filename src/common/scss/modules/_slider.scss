@@ -1,6 +1,10 @@
 // sass-lint:disable empty-line-between-blocks, class-name-format, nesting-depth
 .bkn-slider {
+    display: none;
     width: 100%;
+    @media (min-width: 1200px) {
+        display: block;
+    }
     .bkn-slider_inner {
         background: $cl-black;
         display: flex;
