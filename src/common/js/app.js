@@ -27,3 +27,15 @@ function navToggle() {
 }
 
 navBtn.addEventListener('click', navToggle);
+
+// right menu
+
+const barMenu = document.querySelector('.js-barMenu');
+const menuIcon = document.querySelector('.js-menuIcon');
+
+function openMenu() {
+    this.classList.toggle('is-active');
+    barMenu.classList.toggle('is-open');
+}
+
+menuIcon.addEventListener('click', openMenu);
