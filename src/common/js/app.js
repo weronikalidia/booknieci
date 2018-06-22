@@ -22,8 +22,8 @@ const navList = document.querySelector('.js-navList');
 const navBtn = document.querySelector('.js-navBtn');
 
 function navToggle() {
-    this.classList.toggle('is-active');
-    navList.classList.toggle('is-open');
+    navBtn.classList.toggle('is-open');
+    navList.classList.toggle('is-toggle');
 }
 
 navBtn.addEventListener('click', navToggle);
@@ -39,3 +39,10 @@ function openMenu() {
 }
 
 menuIcon.addEventListener('click', openMenu);
+
+function barMenuHei() {
+    let navH = document.querySelector('nav').offsetHeight;
+    document.querySelector('.js-barMenu').setAttribute('style', 'height: calc(100vh - ' + navH + 'px)');
+}
+
+barMenuHei();
