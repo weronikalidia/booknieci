@@ -31,7 +31,7 @@ gulp.task('serve', ['sass'], () => {
     });
     gulp.watch(sources.html, ['reload']);
     gulp.watch(sources.scss, ['sass','reload']);
-    gulp.watch(sources.css, ['minify']);
+    // gulp.watch(sources.css, ['minify']);
 });
 
 gulp.task('sass-lint', () => {

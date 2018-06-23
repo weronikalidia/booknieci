@@ -1,9 +1,22 @@
 // sass-lint:disable empty-line-between-blocks, clean-import-paths
-@import 'reset';
 @import 'custom/colors';
 @import 'custom/typo';
+@import 'modules/_nav';
 @import 'modules/_product';
 @import 'modules/_slider';
+
+//reset styles
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+//others
 .bkn-close {
     font: 300 20px/20px $font-primary;
     position: absolute;

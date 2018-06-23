@@ -1,17 +1,68 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>booknieci.pl</title>
+    <link rel="stylesheet" href="common/fontello/css/fontello.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&amp;subset=latin-ext" rel="stylesheet">
     <link rel="stylesheet" href="common/css/style.css">
 </head>
 <body>
-    <nav>
+    <div class="bkn-nav">
+        <nav>
+            <div class="bkn-nav_cat">
+                <div class="bkn-nav_catBtn js-navBtn">
+                    <p>kategorie <span class="icon-angle-down"></span></p>
+                </div>
+            </div>
+            <div class="bkn-nav_logo">
+                <p>book<span>nięci</span></p>
+            </div>
+            <div class="bkn-nav_bar">
+                <a href="#">zaloguj</a>
+                <span class="icon-menu js-menuIcon"></span>
+            </div>
+        </nav>
+        <div class="bkn-nav_menuCat js-navList">
+            <ul class="bkn-nav_catList">
+                <li><a href="#">obyczajowe</a></li>
+                <li><a href="#">kryminały</a></li>
+                <li><a href="#">biografie</a></li>
+                <li><a href="#">sensacje</a></li>
+                <li><a href="#">romans</a></li>
+                <li><a href="#">fantasy</a></li>
+                <li><a href="#">sci-fi</a></li>
+                <li><a href="#">dla dzieci</a></li>
+                <li><a href="#">biografie</a></li>
+                <li><a href="#">historyczne</a></li>
+            </ul>
+        </div>
+        <div class="bkn-nav_barMenu js-barMenu">
+            <div class="bkn-nav_barMenuInner">
+                <div class="bkn-nav_menuSearch">
+                    <input type="text">
+                    <button type="submit"><i class="icon-search"></i></button>
+                </div>
+                <div class="bkn-nav_menuLinks">
+                    <a href="#">O nas</a>
+                    <a href="#">Kontakt</a>
+                    <a href="#">Regulamin</a>
+                    <a href="#">Polityka prywatności</a>
+                    <a href="#">Pomoc</a>
+                </div>
+                <div class="bkn-nav_menuSocials">
+                    <a href="#"><i class="icon-facebook"></i></a>
+                    <a href="#"><i class="icon-twitter"></i></a>
+                    <a href="#"><i class="icon-instagram"></i></a>
+                    <a href="#"><i class="icon-youtube"></i></a>
+                </div>
+            </div>
+        </div>
 
-    </nav>
+    </div>
     <section id="b-slider" class="bkn-slider">
         <div class="bkn-slider_inner">
             <div class="bkn-slider_item is-first js-sliderItem">

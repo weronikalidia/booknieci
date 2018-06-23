@@ -1,0 +1,191 @@
+//sass-lint:disable empty-line-between-blocks, nesting-depth, class-name-format, variable-name-format
+.bkn-nav {
+    position: relative;
+    ul {
+        list-style: none;
+        li {
+            ul {
+                display: none;
+            }
+            &.is-open {
+                ul {
+                    display: block;
+                }
+            }
+        }
+    }
+    nav {
+        align-items: center;
+        background: $cl-white;
+        display: flex;
+        margin: 0 auto;
+        padding: 10px 0;
+        position: relative;
+        top: 0;
+        width: 95%;
+        z-index: 11;
+        .bkn-nav_cat {
+            flex: 1;
+            position: relative;
+            .bkn-nav_catBtn {
+                background: $cl-white;
+                display: inline-block;
+                width: 100%;
+                z-index: 11;
+                &.is-open {
+                    span {
+                        &::before {
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+                p {
+                    color: $cl-greyB5;
+                    font-family: $font-primary;
+                    font-size: 16px;
+                    font-weight: 300;
+                    transition: .3s;
+                    &:hover {
+                        color: $cl-grey86;
+                        cursor: pointer;
+                    }
+                    span {
+                        &::before {
+                            transition: transform .4s;
+                        }
+                    }
+                }
+                &.is-active {
+                    .icon-angle-down {
+                        &::before {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+            }
+        }
+        .bkn-nav_logo {
+            flex: 3;
+            color: $cl-grey28;
+            font-family: $font-primary;
+            font-size: 20px;
+            text-align: center;
+            span {
+                font-weight: 700;
+            }
+        }
+        .bkn-nav_bar {
+            flex: 1;
+            text-align: right;
+            a {
+                font-family: $font-primary;
+                font-weight: 300;
+                color: $cl-greyB5;
+                text-decoration: none;
+                font-size: 16px;
+                padding-right: 20px;
+                transition: color .3s;
+                &:hover {
+                    color: $cl-grey86;
+                }
+            }
+            span {
+                color: $cl-greyB5;
+                transition: color .3s;
+                &:hover {
+                    color: $cl-grey86;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .bkn-nav_barMenu {
+        box-sizing: border-box;
+        background: $cl-white;
+        width: 300px;
+        position: absolute;
+        right: -300px;
+        top: 47px;
+        bottom: 0;
+        z-index: 1;
+        padding: 10px;
+        transition: right .6s;
+        &.is-open {
+            right: 0;
+        }
+        .bkn-nav_barMenuInner {
+            position: relative;
+            height: 100%;
+            .bkn-nav_menuSearch {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-top: 20px;
+                input {
+                    padding: 5px 10px;
+                    border: 1px solid $cl-greyEA;
+                }
+                button {
+                    padding: 5px 10px;
+                    border: 1px solid $cl-greyEA;
+                    background: $cl-greyEA;
+                    i {
+                        color: $cl-grey28;
+                    }
+                }
+            }
+            .bkn-nav_menuLinks {
+                width: 100%;
+                text-align: center;
+                padding: 25px 0;
+                a {
+                    display: block;
+                    text-decoration: none;
+                    font: 300 22px/34px $font-primary;
+                    color: $cl-greyB5;
+                    transition: color .4s;
+                    &:hover {
+                        color: $cl-grey28;
+                    }
+                }
+            }
+            .bkn-nav_menuSocials {
+                display: flex;
+                justify-content: center;
+                position: absolute;
+                bottom: 25px;
+                width: 100%;
+                a {
+                    color: $cl-greyB5;
+                    transition: color .3s;
+                    padding: 0 5px;
+                    font-size: 26px;
+                    &:hover {
+                        color: $cl-grey28;
+                    }
+                }
+            }
+        }
+    }
+    .bkn-nav_menuCat {
+        top: -300px;
+        position: absolute;
+        width: 200px;
+        padding: 5px 10px 20px 33px;
+        box-sizing: border-box;
+        display: inline-block;
+        background: $cl-white;
+        z-index: 1;
+        transition: top .6s;
+        &.is-toggle {
+            top: 47px;
+        }
+        .bkn-nav_catList {
+            a {
+                text-decoration: none;
+                color: $cl-grey28;
+                font: 300 16px/28px $font-primary;
+            }
+        }
+    }
+}
