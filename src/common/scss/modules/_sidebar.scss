@@ -1,0 +1,53 @@
+.bkn-sidebar {
+    width: 20%;
+    float: left;
+    padding-top: 80px;
+    .bkn-sidebarItem {
+        padding: 15px 0;
+        h3 {
+            font: 700 16px/24px $font-primary;
+            padding: 10px 0;
+        }
+        ul {
+            &.is-book {
+                span {
+                    height: 54px;
+                    border-radius: 0;
+                }
+            }
+            li {
+            display: flex;
+            align-items: center;
+            padding: 7px 0;
+            transition: all .3s;
+            // &:hover {
+            //     background: $cl-white;
+            //     padding: 7px 12px 7px 10px;
+            //     margin-left: -10px;
+            //     border-radius: 50px;
+            //     cursor: pointer;
+            //     display: inline-flex;
+            // }
+            span {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+                margin-right: 15px;
+                border-radius: 50%;
+                box-shadow: 0 0 10px $cl-grey28;
+                img {
+                    max-width: 100%;
+                }
+            }
+            a {
+                color: $cl-grey28;
+                font-family: $font-primary;
+                text-decoration: none;
+                font-weight: 300;
+                font-size: 14px;
+            }
+        }
+        }
+    }
+}

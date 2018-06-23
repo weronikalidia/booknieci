@@ -1,0 +1,9 @@
+.bkn-content {
+    width: 100%;
+    background: $cl-greyEA;
+    display: inline-block;
+    .bkn-content_inner {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
