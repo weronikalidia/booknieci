@@ -1,8 +1,10 @@
 // sass-lint:disable empty-line-between-blocks, clean-import-paths
 @import 'custom/colors';
 @import 'custom/typo';
+@import 'modules/_content';
 @import 'modules/_nav';
 @import 'modules/_product';
+@import 'modules/_sidebar';
 @import 'modules/_slider';
 
 //reset styles
@@ -13,7 +15,6 @@
 
 body {
     max-width: 100%;
-    overflow: hidden;
 }
 
 //others
